@@ -17,16 +17,17 @@ public class Exam2 {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://rakuplus.jp");
 		WebElement element = driver.findElement(By.cssSelector("#user_login"));
-		element.sendKeys("yuna.tanaka@rakus-partners.co.jp");
+		element.sendKeys("");
 		WebElement element2 = driver.findElement(By.cssSelector("#user_pass"));
-		element2.sendKeys("yuna.tanaka@rakus-partners.co.jp");
+		element2.sendKeys("");
 		element2.submit();
 		WebElement element3 = driver.findElement(By.cssSelector("#categories-3 > ul > li.cat-item.cat-item-2 > ul > li.cat-item.cat-item-48 > a"));
 		element3.click();
 		WebElement element4 = driver.findElement(By.cssSelector("#main > div.cardtype.cf > article:nth-child(1) > a"));
 		element4.click();
 		//セクションで取り出す
-		List<WebElement> divElemList = driver.findElements(By.cssSelector("entry-content.cf"));
+		WebElement element5 = driver.findElement(By.cssSelector("entry-content.cf"));
+		List<WebElement> elements = element5.findElements(null);
 		int count = 0 ;
 		for(WebElement elem : divElemList) {
 			if(count > 0) {
