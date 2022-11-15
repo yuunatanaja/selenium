@@ -22,4 +22,4 @@ public class Main {
 		System.out.println(driver.getTitle());
 	}
 
-}
+}#rso > div:nth-child(1) > div > div > div.Z26q7c.UK95Uc.jGGQ5e > div > a > h3
